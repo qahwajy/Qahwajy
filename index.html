@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#8B4513">
     <meta name="description" content="قهوجي وصبابين محترفين في الطائف (الطايف) و الباحة لخدمة ضيافة راقية في الحفلات والمناسبات - تقدم القهوة العربية الاصيلة بلمسة تراثية، بأسعار مميزة وخدمة فاخرة">
     <meta name="keywords" content="قهوجي, صبابين, الطائف, الطايف, الباحة, قهوة عربية, ضيافة, حفلات, مناسبات, تراث, أعراس">
-    <meta name="author" content="قهوجي وصبابين الطائف و الباحة">
+    <meta name="author" content="قهوجي وصبابين الطائف الباحة">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph Tags -->
@@ -29,7 +29,7 @@
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "قهوجي وصبابين الطائف و الباحة",
+        "name": "قهوجي وصبابين الطائف الباحة",
         "description": "خدمة تقديم القهوة العربية الأصيلة والضيافة التراثية للمناسبات والفعاليات والمؤتمرات",
         "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4uSLixYxuuKZ0BMnJF8M1dEfDl-5aSM1BQmBFNKqw1QTOBXXVwq3HrymeQ5n6SLTy6SpRrxyQPkYD-EH7LBM4lS94zCY4NMN4tINxCh2fAG-ELPUyUxobUMAm1brqa0NjY_z2_hHpzYOSzE4nKEkIagr6jvqvqwQEmZ7WUBogHUfFUy6sHejwUlnvn_d6/s800/IMG-20250619-WA0033.jpg",
         "telephone": "+966507712688",
@@ -57,7 +57,7 @@
             "reviewCount": "150"
         },
         "openingHours": "Mo-Th 08:00-22:00, Sa-Su 08:00-22:00",
-        "url": "https://qahwajy.github.io/Qahwajy/",
+        "url": "https://n852741.github.io/-/",
         "sameAs": [
             "https://wa.me/966507712688"
         ]
@@ -113,6 +113,172 @@
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Enhanced Beautiful Loading Screen */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--coffee-primary) 0%, var(--coffee-secondary) 50%, var(--coffee-light) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: all 0.8s ease;
+        }
+
+        .page-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(1.1);
+        }
+
+        .beautiful-loader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .coffee-animation {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .coffee-cup {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 4px solid rgba(255, 255, 255, 0.8);
+            border-radius: 20px 20px 50px 50px;
+            position: relative;
+            animation: bounce 2s infinite;
+        }
+
+        .coffee-cup::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 40px;
+            background: var(--coffee-dark);
+            border-radius: 50px 50px 0 0;
+            animation: fill 3s infinite;
+        }
+
+        .coffee-cup::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -25px;
+            width: 20px;
+            height: 30px;
+            border: 3px solid rgba(255, 255, 255, 0.8);
+            border-left: none;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .steam {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .steam-line {
+            width: 3px;
+            height: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 3px;
+            animation: steam 2s infinite ease-in-out;
+        }
+
+        .steam-line:nth-child(1) { animation-delay: 0s; }
+        .steam-line:nth-child(2) { animation-delay: 0.3s; }
+        .steam-line:nth-child(3) { animation-delay: 0.6s; }
+
+        .loading-text {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 600;
+            font-family: 'Amiri', serif;
+            text-align: center;
+            animation: pulse 2s infinite;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .loading-subtext {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            text-align: center;
+            margin-top: 0.5rem;
+            animation: fade 3s infinite;
+        }
+
+        .loading-dots {
+            display: flex;
+            gap: 8px;
+            margin-top: 1rem;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            animation: wave 1.5s infinite ease-in-out;
+        }
+
+        .dot:nth-child(1) { animation-delay: 0s; }
+        .dot:nth-child(2) { animation-delay: 0.2s; }
+        .dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes fill {
+            0%, 100% { height: 10px; }
+            50% { height: 40px; }
+        }
+
+        @keyframes steam {
+            0%, 100% { 
+                transform: translateY(0) scaleY(1);
+                opacity: 0.7;
+            }
+            50% { 
+                transform: translateY(-10px) scaleY(1.2);
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes fade {
+            0%, 100% { opacity: 0.9; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes wave {
+            0%, 60%, 100% { transform: scale(1); }
+            30% { transform: scale(1.3); }
         }
 
         /* Performance and Loading Optimizations */
@@ -458,9 +624,16 @@
             flex-shrink: 0;
         }
 
-        /* Enhanced Testimonials */
+        /* FIXED: Enhanced Testimonials with proper responsive display */
+        .testimonials-container {
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
         .testimonial-slider {
             position: relative;
+            width: 100%;
             overflow: hidden;
             border-radius: var(--border-radius-lg);
         }
@@ -468,22 +641,24 @@
         .testimonials-track {
             display: flex;
             transition: transform 0.6s ease;
+            width: 100%;
         }
 
         .testimonial-slide {
-            min-width: 100%;
+            flex: 0 0 100%;
             padding: 0 1rem;
+            box-sizing: border-box;
         }
 
         @media (min-width: 768px) {
             .testimonial-slide {
-                min-width: 50%;
+                flex: 0 0 50%;
             }
         }
 
         @media (min-width: 1024px) {
             .testimonial-slide {
-                min-width: 33.333%;
+                flex: 0 0 33.333%;
             }
         }
 
@@ -496,6 +671,11 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            height: auto;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .testimonial-stars {
@@ -509,11 +689,37 @@
             line-height: 1.8;
             margin-bottom: 1.5rem;
             font-style: italic;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
         }
 
         .testimonial-author {
             font-weight: 600;
             opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        /* Testimonial Navigation Dots */
+        .testimonial-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .dot-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(139, 69, 19, 0.3);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .dot-indicator.active {
+            background: var(--coffee-primary);
+            transform: scale(1.2);
         }
 
         /* Enhanced Sections */
@@ -730,103 +936,13 @@
             
             .testimonial-card {
                 padding: 1.5rem;
+                min-height: 200px;
             }
             
             .contact-item {
                 flex-direction: column;
                 text-align: center;
                 gap: 0.5rem;
-            }
-        }
-
-        /* Custom Loader */
-        .page-loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--coffee-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-
-        .page-loader.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .coffee-loader {
-            width: 60px;
-            height: 60px;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-top: 4px solid white;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Performance Optimizations */
-        .will-change-transform {
-            will-change: transform;
-        }
-
-        .gpu-accelerated {
-            transform: translateZ(0);
-            backface-visibility: hidden;
-            perspective: 1000px;
-        }
-
-        /* Print Styles */
-        @media print {
-            .whatsapp-fab,
-            .mobile-nav,
-            .page-loader {
-                display: none !important;
-            }
-            
-            .hero-section {
-                background: var(--coffee-primary) !important;
-                color: white !important;
-            }
-            
-            .glass-card {
-                box-shadow: none !important;
-                border: 1px solid #ddd !important;
-            }
-        }
-
-        /* Accessibility Improvements */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-
-        /* Dark Mode System Support */
-        @media (prefers-color-scheme: dark) {
-            .mobile-nav {
-                background: rgba(0, 0, 0, 0.9);
-                border-top-color: rgba(255, 255, 255, 0.1);
-            }
-            
-            .nav-item {
-                color: rgba(255, 255, 255, 0.7);
-            }
-            
-            .nav-item.active,
-            .nav-item:hover {
-                color: var(--coffee-light);
-                background: rgba(139, 69, 19, 0.2);
             }
         }
 
@@ -866,12 +982,101 @@
                 transform: translateY(0);
             }
         }
+
+        /* Print Styles for PDF Export */
+        @media print {
+            .whatsapp-fab,
+            .mobile-nav,
+            .page-loader {
+                display: none !important;
+            }
+            
+            .hero-section {
+                background: var(--coffee-primary) !important;
+                color: white !important;
+                min-height: auto !important;
+                padding: 2rem 0 !important;
+            }
+            
+            .glass-card {
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+            }
+            
+            .section {
+                padding: 2rem 1rem !important;
+            }
+            
+            .testimonial-card {
+                break-inside: avoid;
+                margin-bottom: 1rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            
+            .testimonials-track {
+                display: block !important;
+            }
+            
+            .testimonial-slide {
+                display: block !important;
+                flex: none !important;
+                margin-bottom: 1rem;
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Accessibility Improvements */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Dark Mode System Support */
+        @media (prefers-color-scheme: dark) {
+            .mobile-nav {
+                background: rgba(0, 0, 0, 0.9);
+                border-top-color: rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-item {
+                color: rgba(255, 255, 255, 0.7);
+            }
+            
+            .nav-item.active,
+            .nav-item:hover {
+                color: var(--coffee-light);
+                background: rgba(139, 69, 19, 0.2);
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Page Loader -->
+    <!-- Enhanced Beautiful Page Loader -->
     <div class="page-loader" id="pageLoader">
-        <div class="coffee-loader"></div>
+        <div class="beautiful-loader">
+            <div class="coffee-animation">
+                <div class="coffee-cup">
+                    <div class="steam">
+                        <div class="steam-line"></div>
+                        <div class="steam-line"></div>
+                        <div class="steam-line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="loading-text">قهوجي وصبابين الطائف و الباحة</div>
+            <div class="loading-subtext">فن الضيافة العربية الأصيلة</div>
+            <div class="loading-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
     </div>
 
     <!-- Enhanced WhatsApp Button -->
@@ -1100,108 +1305,113 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- FIXED: Testimonials Section with proper responsive display -->
     <section class="section bg-white">
         <div class="container mx-auto px-4">
             <h2 class="section-title" data-aos="fade-up">ما يقوله عملاؤنا الكرام</h2>
-            <div class="testimonial-slider" data-aos="fade-up" data-aos-delay="200">
-                <div class="testimonials-track" id="testimonialTrack">
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+            <div class="testimonials-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-slider">
+                    <div class="testimonials-track" id="testimonialTrack">
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    خدمة راقية جداً وقهوة لذيذة بطعم أصيل. أضافوا لمسة تراثية جميلة لحفل زفاف ابني. كل الضيوف أعجبوا بالخدمة المميزة والطعم الرائع.
+                                </p>
+                                <p class="testimonial-author">محمد العتيبي</p>
                             </div>
-                            <p class="testimonial-text">
-                                خدمة راقية جداً وقهوة لذيذة بطعم أصيل. أضافوا لمسة تراثية جميلة لحفل زفاف ابني. كل الضيوف أعجبوا بالخدمة المميزة والطعم الرائع.
-                            </p>
-                            <p class="testimonial-author">محمد العتيبي</p>
                         </div>
-                    </div>
-                    
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    شركتنا تتعامل معهم دائماً في المؤتمرات والفعاليات. احترافية عالية والتزام تام بالمواعيد. يعرفون كيف يقدمون ضيافة تليق بمكانة مؤسستنا.
+                                </p>
+                                <p class="testimonial-author">عبدالله الغامدي</p>
                             </div>
-                            <p class="testimonial-text">
-                                شركتنا تتعامل معهم دائماً في المؤتمرات والفعاليات. احترافية عالية والتزام تام بالمواعيد. يعرفون كيف يقدمون ضيافة تليق بمكانة مؤسستنا.
-                            </p>
-                            <p class="testimonial-author">عبدالله الغامدي</p>
                         </div>
-                    </div>
-                    
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    أفضل خدمة قهوة في المنطقة بلا منازع. الطعم أصيل والتقديم راقي جداً. طاقم العمل مرتب ونظيف وأنيق. أنصح الجميع بالتعامل معهم.
+                                </p>
+                                <p class="testimonial-author">سلطان القحطاني</p>
                             </div>
-                            <p class="testimonial-text">
-                                أفضل خدمة قهوة في المنطقة بلا منازع. الطعم أصيل والتقديم راقي جداً. طاقم العمل مرتب ونظيف وأنيق. أنصح الجميع بالتعامل معهم.
-                            </p>
-                            <p class="testimonial-author">سلطان القحطاني</p>
                         </div>
-                    </div>
-                    
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    تعاملت معهم في مؤتمر مهم وكانت الخدمة مثالية. القهوة ذات مذاق رائع وتقديم متميز. حرفية في العمل وأسلوب راقي في التعامل.
+                                </p>
+                                <p class="testimonial-author">فهد الشهراني</p>
                             </div>
-                            <p class="testimonial-text">
-                                تعاملت معهم في مؤتمر مهم وكانت الخدمة مثالية. القهوة ذات مذاق رائع وتقديم متميز. حرفية في العمل وأسلوب راقي في التعامل.
-                            </p>
-                            <p class="testimonial-author">فهد الشهراني</p>
                         </div>
-                    </div>
-                    
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    خدمة استثنائية ومميزة للغاية. يحافظون على التراث العربي الأصيل في تقديم القهوة. أسعار معقولة مقابل جودة عالية جداً.
+                                </p>
+                                <p class="testimonial-author">خالد البلوي</p>
                             </div>
-                            <p class="testimonial-text">
-                                خدمة استثنائية ومميزة للغاية. يحافظون على التراث العربي الأصيل في تقديم القهوة. أسعار معقولة مقابل جودة عالية جداً.
-                            </p>
-                            <p class="testimonial-author">خالد البلوي</p>
                         </div>
-                    </div>
-                    
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    فريق عمل محترف ومتميز. قهوة بنكهة أصيلة وخدمة على أعلى مستوى. أضافوا جواً من الأصالة والكرم لمناسبتنا العائلية.
+                                </p>
+                                <p class="testimonial-author">ناصر الحربي</p>
                             </div>
-                            <p class="testimonial-text">
-                                فريق عمل محترف ومتميز. قهوة بنكهة أصيلة وخدمة على أعلى مستوى. أضافوا جواً من الأصالة والكرم لمناسبتنا العائلية.
-                            </p>
-                            <p class="testimonial-author">ناصر الحربي</p>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Testimonial Navigation Dots -->
+                <div class="testimonial-dots" id="testimonialDots"></div>
             </div>
         </div>
     </section>
@@ -1222,7 +1432,7 @@
                 <div class="testimonial-card">
                     <i class="fas fa-quote-right text-4xl mb-4 opacity-30"></i>
                     <p class="text-2xl font-semibold leading-relaxed" style="font-family: 'Amiri', serif;">
-                        "في قهوجي وصبابين الطائف الباحة... نصنع من كل رشفة قهوة ذكرى لا تُنسى ولحظة من التراث الأصيل"
+                        "في قهوجي وصبابين الطائف و الباحة... نصنع من كل رشفة قهوة ذكرى لا تُنسى ولحظة من التراث الأصيل"
                     </p>
                     <i class="fas fa-quote-left text-4xl mt-4 opacity-30"></i>
                 </div>
@@ -1299,15 +1509,15 @@
             offset: 100
         });
 
-        // Hide page loader
+        // Enhanced Page Loader with beautiful animation
         window.addEventListener('load', () => {
             const loader = document.getElementById('pageLoader');
             setTimeout(() => {
                 loader.classList.add('hidden');
                 setTimeout(() => {
                     loader.style.display = 'none';
-                }, 500);
-            }, 1000);
+                }, 800);
+            }, 2000); // Extended time to show beautiful loader
         });
 
         // Smooth navigation and active state management
@@ -1363,26 +1573,79 @@
             });
         });
 
-        // Enhanced testimonial slider with auto-play
+        // FIXED: Enhanced testimonial slider with proper responsive functionality
         const track = document.getElementById('testimonialTrack');
         const slides = track.children;
+        const dotsContainer = document.getElementById('testimonialDots');
         let currentSlide = 0;
         let autoSlideInterval;
         let isUserInteracting = false;
+        let slidesPerView = 1;
 
-        function updateSlider() {
-            const slideWidth = slides[0].offsetWidth;
-            const translateX = -currentSlide * slideWidth;
-            track.style.transform = `translateX(${translateX}px)`;
+        // Calculate slides per view based on screen size
+        function calculateSlidesPerView() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth >= 1024) {
+                slidesPerView = 3;
+            } else if (screenWidth >= 768) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 1;
+            }
         }
 
+        // Create navigation dots
+        function createDots() {
+            dotsContainer.innerHTML = '';
+            const totalDots = Math.ceil(slides.length / slidesPerView);
+            
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'dot-indicator';
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        // Update slider position
+        function updateSlider() {
+            calculateSlidesPerView();
+            const slideWidth = 100 / slidesPerView;
+            const translateX = -currentSlide * slideWidth;
+            track.style.transform = `translateX(${translateX}%)`;
+            
+            // Update dots
+            const dots = dotsContainer.querySelectorAll('.dot-indicator');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === Math.floor(currentSlide / slidesPerView));
+            });
+        }
+
+        // Go to specific slide
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex * slidesPerView;
+            if (currentSlide >= slides.length) {
+                currentSlide = slides.length - slidesPerView;
+            }
+            if (currentSlide < 0) {
+                currentSlide = 0;
+            }
+            updateSlider();
+        }
+
+        // Next slide function
         function nextSlide() {
             if (!isUserInteracting) {
-                currentSlide = (currentSlide + 1) % slides.length;
+                currentSlide += slidesPerView;
+                if (currentSlide >= slides.length) {
+                    currentSlide = 0;
+                }
                 updateSlider();
             }
         }
 
+        // Auto-slide functions
         function startAutoSlide() {
             clearInterval(autoSlideInterval);
             autoSlideInterval = setInterval(nextSlide, 4000);
@@ -1392,8 +1655,16 @@
             clearInterval(autoSlideInterval);
         }
 
-        // Start auto-slide
-        startAutoSlide();
+        // Initialize testimonials
+        function initTestimonials() {
+            calculateSlidesPerView();
+            createDots();
+            updateSlider();
+            startAutoSlide();
+        }
+
+        // Initialize on page load
+        initTestimonials();
 
         // Pause on user interaction
         track.addEventListener('mouseenter', () => {
@@ -1406,7 +1677,7 @@
             setTimeout(startAutoSlide, 2000);
         });
 
-        // Touch events for mobile slider
+        // Enhanced touch events for mobile slider
         let startX = 0;
         let currentX = 0;
         let isDragging = false;
@@ -1424,9 +1695,9 @@
             e.preventDefault();
             currentX = e.touches[0].clientX;
             const diff = currentX - startX;
-            const slideWidth = slides[0].offsetWidth;
-            const currentTranslate = -currentSlide * slideWidth + diff;
-            track.style.transform = `translateX(${currentTranslate}px)`;
+            const slideWidth = track.offsetWidth / slidesPerView;
+            const currentTranslate = -currentSlide * (100 / slidesPerView) + (diff / slideWidth) * (100 / slidesPerView);
+            track.style.transform = `translateX(${currentTranslate}%)`;
         });
 
         track.addEventListener('touchend', () => {
@@ -1439,9 +1710,9 @@
             
             if (Math.abs(diff) > threshold) {
                 if (diff > 0) {
-                    currentSlide = Math.max(0, currentSlide - 1);
+                    currentSlide = Math.max(0, currentSlide - slidesPerView);
                 } else {
-                    currentSlide = Math.min(slides.length - 1, currentSlide + 1);
+                    currentSlide = Math.min(slides.length - slidesPerView, currentSlide + slidesPerView);
                 }
             }
             
@@ -1458,7 +1729,7 @@
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(() => {
-                updateSlider();
+                initTestimonials();
             }, 250);
         });
 
@@ -1681,14 +1952,6 @@
             video.setAttribute('playsinline', '');
             video.setAttribute('webkit-playsinline', '');
         });
-
-        // Service Worker registration for PWA features (if needed)
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                // Uncomment when service worker is available
-                // navigator.serviceWorker.register('/sw.js');
-            });
-        }
 
         // Error handling for images
         lazyImages.forEach(img => {
