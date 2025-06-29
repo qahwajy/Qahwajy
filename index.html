@@ -6,28 +6,15 @@
     <meta name="theme-color" content="#8B4513">
     <meta name="description" content="قهوجي وصبابين محترفين في الطائف والباحة لخدمة ضيافة راقية في الحفلات والمناسبات - تقدم القهوة العربية الأصيلة بلمسة تراثية">
     <meta name="keywords" content="قهوجي, صبابين, الطائف, الباحة, قهوة عربية, ضيافة, حفلات, مناسبات, تراث">
-    <meta name="author" content="قهوجي وصبابين الطائف والباحة">
-    <meta name="robots" content="index, follow">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="قهوجي وصبابين الطائف والباحة - خدمة ضيافة راقية">
-    <meta property="og:description" content="فن الضيافة العربية الأصيلة منذ القدم - خدمة تقديم القهوة العربية المحترفة">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ar_SA">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="قهوجي وصبابين الطائف والباحة">
-    <meta name="twitter:description" content="فن الضيافة العربية الأصيلة منذ القدم">
-    
-    <title>قهوجي وصبابين الطائف والباحة - خدمة ضيافة راقية</title>
+    <title>قهوجي وصبابين الطائف و الباحة - خدمة ضيافة راقية</title>
     
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "قهوجي وصبابين الطائف والباحة",
+        "name": "قهوجي وصبابين الطائف و الباحة",
         "description": "خدمة تقديم القهوة العربية الأصيلة والضيافة التراثية للمناسبات والفعاليات",
         "telephone": "+966507712688",
         "address": {
@@ -42,13 +29,11 @@
             "ratingValue": "4.9",
             "reviewCount": "150"
         },
-        "openingHours": "Mo-Th 08:00-22:00, Sa-Su 08:00-22:00",
-        "url": "https://qahwaji-taif-baha.netlify.app",
-        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4uSLixYxuuKZ0BMnJF8M1dEfDl-5aSM1BQmBFNKqw1QTOBXXVwq3HrymeQ5n6SLTy6SpRrxyQPkYD-EH7LBC4lS94zCY4NMN4tINxCh2fAG-ELPUyUxobUMAm1brqa0NjY_z2_hHpzYOSzE4nKEkIagr6jvqvqwQEmZ7WUBogHUfFUy6sHejwUlnvn_d6/s800/IMG-20250619-WA0033.jpg"
+        "openingHours": "Mo-Th 08:00-22:00, Sa-Su 08:00-22:00"
     }
     </script>
     
-    <!-- CSS Libraries via jsDelivr -->
+    <!-- CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -59,6 +44,7 @@
             --coffee-secondary: #D2691E;
             --coffee-light: #CD853F;
             --gold: #FFD700;
+            --coffee-brown: #8B4513;
         }
 
         * {
@@ -153,7 +139,7 @@
 
         .whatsapp-btn {
             background: linear-gradient(135deg, #25D366 0%, #20C759 100%);
-            color: white;
+            color: var(--coffee-brown) !important;
             padding: 1rem 2rem;
             border-radius: 50px;
             text-decoration: none;
@@ -168,8 +154,6 @@
         .whatsapp-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
-            color: white;
-            text-decoration: none;
         }
 
         .gallery-item {
@@ -189,7 +173,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            loading: lazy;
         }
 
         .gallery-overlay {
@@ -214,60 +197,27 @@
             opacity: 1;
         }
 
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 1000;
-            width: 4rem;
-            height: 4rem;
-            background: linear-gradient(135deg, #25D366, #20C759);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            text-decoration: none;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
+        .text-coffee-brown {
+            color: var(--coffee-brown) !important;
         }
 
-        .floating-whatsapp:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
-            color: white;
-        }
+        @media print {
+            .whatsapp-btn {
+                display: none !important;
+            }
+            
+            .glass-card {
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+            }
+            
+            .section {
+                padding: 2rem 1rem !important;
+            }
 
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-            padding: 2rem;
-        }
-
-        .modal img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            border-radius: 1rem;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            z-index: 2001;
+            .fixed {
+                position: static !important;
+            }
         }
 
         @media (max-width: 768px) {
@@ -278,122 +228,82 @@
             .glass-card {
                 margin: 0 0.5rem;
             }
-
-            .floating-whatsapp {
-                bottom: 1rem;
-                right: 1rem;
-                width: 3.5rem;
-                height: 3.5rem;
-                font-size: 1.25rem;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-
-        /* Loading animation */
-        .loading {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease;
-        }
-
-        .loading.loaded {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Scroll animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
-    <section class="min-h-screen coffee-gradient hero-pattern flex items-center relative loading">
+    <section class="min-h-screen coffee-gradient hero-pattern flex items-center relative">
         <div class="container mx-auto px-4 text-center text-white relative z-10">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 font-serif">
-                قهوجي وصبابين الطائف والباحة
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 font-serif text-coffee-brown">
+                قهوجي وصبابين الطائف الباحة
             </h1>
-            <p class="text-xl md:text-2xl mb-8 opacity-90">
+            <p class="text-xl md:text-2xl mb-8 opacity-90 text-coffee-brown">
                 فن الضيافة العربية الأصيلة منذ القدم
             </p>
             
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
                 <div class="bg-white bg-opacity-20 backdrop-blur-md rounded-full px-6 py-3 flex items-center gap-3">
-                    <i class="fas fa-map-marker-alt text-yellow-300" aria-hidden="true"></i>
-                    <span>الباحة - الطائف - المملكة العربية السعودية</span>
+                    <i class="fas fa-map-marker-alt text-yellow-300"></i>
+                    <span class="text-coffee-brown">الباحة - الطائف - المملكة العربية السعودية</span>
                 </div>
                 <div class="bg-white bg-opacity-20 backdrop-blur-md rounded-full px-6 py-3 flex items-center gap-3">
-                    <i class="fas fa-phone text-green-300" aria-hidden="true"></i>
-                    <span dir="ltr">+966507712688</span>
+                    <i class="fas fa-phone text-green-300"></i>
+                    <span class="text-coffee-brown">+966507712688</span>
                 </div>
             </div>
 
-            <a href="https://wa.me/966507712688" class="whatsapp-btn" aria-label="احجز خدمتك عبر الواتساب">
-                <i class="fab fa-whatsapp text-xl" aria-hidden="true"></i>
+            <a href="https://wa.me/966507712688" class="whatsapp-btn">
+                <i class="fab fa-whatsapp text-xl"></i>
                 احجز خدمتك الآن
             </a>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section class="section py-16 bg-white loading">
+    <section class="section py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="section-title">معرض أعمالنا المميزة</h2>
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="gallery-item glass-card" data-image="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4uSLixYxuuKZ0BMnJF8M1dEfDl-5aSM1BQmBFNKqw1QTOBXXVwq3HrymeQ5n6SLTy6SpRrxyQPkYD-EH7LBM4lS94zCY4NMN4tINxCh2fAG-ELPUyUxobUMAm1brqa0NjY_z2_hHpzYOSzE4nKEkIagr6jvqvqwQEmZ7WUBogHUfFUy6sHejwUlnvn_d6/s800/IMG-20250619-WA0033.jpg">
+                <div class="gallery-item glass-card">
                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4uSLixYxuuKZ0BMnJF8M1dEfDl-5aSM1BQmBFNKqw1QTOBXXVwq3HrymeQ5n6SLTy6SpRrxyQPkYD-EH7LBM4lS94zCY4NMN4tINxCh2fAG-ELPUyUxobUMAm1brqa0NjY_z2_hHpzYOSzE4nKEkIagr6jvqvqwQEmZ7WUBogHUfFUy6sHejwUlnvn_d6/s800/IMG-20250619-WA0033.jpg" 
-                         alt="قهوجي الطائف يقدم القهوة العربية الأصيلة بطريقة تراثية">
+                         alt="قهوجي الطايف يقدم القهوة العربية الأصيلة بطريقة تراثية">
                     <div class="gallery-overlay">
                         <div>
-                            <i class="fas fa-coffee text-4xl mb-2" aria-hidden="true"></i>
+                            <i class="fas fa-coffee text-4xl mb-2"></i>
                             <p>خدمة القهوة العربية الأصيلة</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="gallery-item glass-card" data-image="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTqIN86Q5Qf7HL8MKU5AhSIADfERrzu2-pEIVeAI0Rf9sywXFL39dhWrvppcfZX6GkfrmYOt45munbWyD1zDzOkZnyp1_4yFY4cHMcadky6Xvt1IpuAN02Y5bjPIUH_kV4MFzC7L6ObNho8xViVyRv2bnvNNXl3SUBCCIQ506cSsmA6KysheJDIX-w9Sx4/s800/IMG-20250619-WA0029.jpg">
+                <div class="gallery-item glass-card">
                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTqIN86Q5Qf7HL8MKU5AhSIADfERrzu2-pEIVeAI0Rf9sywXFL39dhWrvppcfZX6GkfrmYOt45munbWyD1zDzOkZnyp1_4yFY4cHMcadky6Xvt1IpuAN02Y5bjPIUH_kV4MFzC7L6ObNho8xViVyRv2bnvNNXl3SUBCCIQ506cSsmA6KysheJDIX-w9Sx4/s800/IMG-20250619-WA0029.jpg" 
                          alt="تقديم القهوة العربية بأسلوب تقليدي في الباحة">
                     <div class="gallery-overlay">
                         <div>
-                            <i class="fas fa-fire text-4xl mb-2" aria-hidden="true"></i>
+                            <i class="fas fa-fire text-4xl mb-2"></i>
                             <p>تحضير القهوة بالطريقة التراثية</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="gallery-item glass-card" data-image="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjig4Citk_WSoxmsw-3O5V4xLk0hpJdZGOS5vgJaVs4vYMMQgTvU89JmuDxnIVKyRlcw35S8LD3blPPWmYQoaY9SqrEmWnojpfwPQTe1yRJXDV_2zDPKdAdTZxY6zt85rZxQ_ZaCQu46Jx3Jabr63VSOAYSXsHGz7D12phnhxzMvpChZS_SSZq0-wqggwSk/s800/IMG-20250619-WA0032.jpg">
+                <div class="gallery-item glass-card">
                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjig4Citk_WSoxmsw-3O5V4xLk0hpJdZGOS5vgJaVs4vYMMQgTvU89JmuDxnIVKyRlcw35S8LD3blPPWmYQoaY9SqrEmWnojpfwPQTe1yRJXDV_2zDPKdAdTZxY6zt85rZxQ_ZaCQu46Jx3Jabr63VSOAYSXsHGz7D12phnhxzMvpChZS_SSZq0-wqggwSk/s800/IMG-20250619-WA0032.jpg" 
                          alt="فريق قهوجي في الطائف والباحة يقدم ضيافة احترافية للمناسبات">
                     <div class="gallery-overlay">
                         <div>
-                            <i class="fas fa-users text-4xl mb-2" aria-hidden="true"></i>
+                            <i class="fas fa-users text-4xl mb-2"></i>
                             <p>خدمة احترافية للمناسبات</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="gallery-item glass-card" data-image="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhi98Y5ZVoPMXdwMpaXgvbHEqrKmcEzq_6KS8opi6-oc6uqlyOuMhPX2-Lc24z1m1LH2SQKy0nKNsUJ-pjVQ2JJQ3Xhr3xJyXXBWt8LQ756dUV7PzZo02m_-Jgb0fu4YgrZtInp-C4ee1s3F359DN99ByJQe_YtpOiHfpyStS66_F4rXBXW2pSnoOrMVCHM/s800/IMG-20250619-WA0030.jpg">
+                <div class="gallery-item glass-card">
                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhi98Y5ZVoPMXdwMpaXgvbHEqrKmcEzq_6KS8opi6-oc6uqlyOuMhPX2-Lc24z1m1LH2SQKy0nKNsUJ-pjVQ2JJQ3Xhr3xJyXXBWt8LQ756dUV7PzZo02m_-Jgb0fu4YgrZtInp-C4ee1s3F359DN99ByJQe_YtpOiHfpyStS66_F4rXBXW2pSnoOrMVCHM/s800/IMG-20250619-WA0030.jpg" 
                          alt="تقديم القهوة بأسلوب عربي راقي مع فريق قهوجي مميز">
                     <div class="gallery-overlay">
                         <div>
-                            <i class="fas fa-star text-4xl mb-2" aria-hidden="true"></i>
+                            <i class="fas fa-star text-4xl mb-2"></i>
                             <p>تقديم القهوة بأسلوب عربي راقي</p>
                         </div>
                     </div>
@@ -403,23 +313,23 @@
     </section>
 
     <!-- About Section -->
-    <section class="section py-16 loading">
+    <section class="section py-16">
         <div class="container mx-auto px-4">
             <h2 class="section-title">من نحن</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass-card p-8 text-center fade-in">
+                <div class="glass-card p-8 text-center">
                     <div class="coffee-icon">
-                        <i class="fas fa-eye" aria-hidden="true"></i>
+                        <i class="fas fa-eye"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-amber-800 font-serif">رؤيتنا</h3>
                     <p class="text-lg leading-relaxed">
-                        أهلاً وسهلاً بكم في <strong>قهوجي وصبابين الطائف والباحة</strong>، حيث نجمع بين التراث العربي الأصيل والحرفية المتقنة في فن إعداد وتقديم القهوة العربية. نؤمن أن القهوة رمز للكرم والضيافة، لذلك نلتزم بتقديم خدمات عالية الجودة تعكس القيم العربية الأصيلة.
+                        أهلاً وسهلاً بكم في <strong>قهوجي وصبابين الطائف الباحة</strong>، حيث نجمع بين التراث العربي الأصيل والحرفية المتقنة في فن إعداد وتقديم القهوة العربية. نؤمن أن القهوة رمز للكرم والضيافة، لذلك نلتزم بتقديم خدمات عالية الجودة تعكس القيم العربية الأصيلة.
                     </p>
                 </div>
                 
-                <div class="glass-card p-8 text-center fade-in">
+                <div class="glass-card p-8 text-center">
                     <div class="coffee-icon">
-                        <i class="fas fa-handshake" aria-hidden="true"></i>
+                        <i class="fas fa-handshake"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-amber-800 font-serif">التزامنا</h3>
                     <p class="text-lg leading-relaxed">
@@ -431,46 +341,46 @@
     </section>
 
     <!-- Services Section -->
-    <section class="section py-16 bg-white loading">
+    <section class="section py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="section-title">خدماتنا المميزة</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-card p-8 text-center fade-in">
+                <div class="glass-card p-8 text-center">
                     <div class="coffee-icon">
-                        <i class="fas fa-home" aria-hidden="true"></i>
+                        <i class="fas fa-home"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-amber-800 font-serif">المناسبات العائلية</h3>
                     <ul class="text-right space-y-2">
-                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2" aria-hidden="true"></i>تقديم القهوة العربية في حفلات الزفاف</li>
-                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2" aria-hidden="true"></i>خدمة ضيافة راقية للعزائم العائلية</li>
-                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2" aria-hidden="true"></i>تقديم الشاي بالطريقة التراثية</li>
-                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2" aria-hidden="true"></i>خدمة محترفة بالزي التراثي</li>
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2"></i>تقديم القهوة العربية في حفلات الزفاف</li>
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2"></i>خدمة ضيافة راقية للعزائم العائلية</li>
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2"></i>تقديم الشاي بالطريقة التراثية</li>
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2"></i>خدمة محترفة بالزي التراثي</li>
                     </ul>
                 </div>
 
-                <div class="glass-card p-8 text-center fade-in">
+                <div class="glass-card p-8 text-center">
                     <div class="coffee-icon">
-                        <i class="fas fa-building" aria-hidden="true"></i>
+                        <i class="fas fa-building"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-amber-800 font-serif">الشركات والمؤسسات</h3>
                     <ul class="text-right space-y-2">
-                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2" aria-hidden="true"></i>خدمة ضيافة للاجتماعات والمؤتمرات</li>
-                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2" aria-hidden="true"></i>تقديم القهوة في المعارض التجارية</li>
-                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2" aria-hidden="true"></i>خدمة يومية للمكاتب والشركات</li>
-                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2" aria-hidden="true"></i>تدريب الموظفين على فن التقديم</li>
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2"></i>خدمة ضيافة للاجتماعات والمؤتمرات</li>
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2"></i>تقديم القهوة في المعارض التجارية</li>
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2"></i>خدمة يومية للمكاتب والشركات</li>
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2"></i>تدريب الموظفين على فن التقديم</li>
                     </ul>
                 </div>
 
-                <div class="glass-card p-8 text-center fade-in">
+                <div class="glass-card p-8 text-center">
                     <div class="coffee-icon">
-                        <i class="fas fa-crown" aria-hidden="true"></i>
+                        <i class="fas fa-crown"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-amber-800 font-serif">المناسبات الخاصة</h3>
                     <ul class="text-right space-y-2">
-                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2" aria-hidden="true"></i>تقديم القهوة في الفنادق والمنتجعات</li>
-                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2" aria-hidden="true"></i>خدمة VIP للشخصيات المهمة</li>
-                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2" aria-hidden="true"></i>المهرجانات والفعاليات الثقافية</li>
-                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2" aria-hidden="true"></i>خدمة حصرية للمناسبات الملكية</li>
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2"></i>تقديم القهوة في الفنادق والمنتجعات</li>
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2"></i>خدمة VIP للشخصيات المهمة</li>
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2"></i>المهرجانات والفعاليات الثقافية</li>
+                        <li class="flex items-center"><i class="fas fa-check text-amber-600 ml-2"></i>خدمة حصرية للمناسبات الملكية</li>
                     </ul>
                 </div>
             </div>
@@ -478,37 +388,37 @@
     </section>
 
     <!-- Features Section -->
-    <section class="section py-16 loading">
+    <section class="section py-16">
         <div class="container mx-auto px-4">
-            <h2 class="section-title">لماذا تختار قهوجي وصبابين الطائف والباحة؟</h2>
+            <h2 class="section-title">لماذا تختار قهوجي وصبابين الطائف و الباحة؟</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="glass-card p-6 text-center fade-in">
+                <div class="glass-card p-6 text-center">
                     <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-amber-700 to-amber-600 rounded-2xl flex items-center justify-center text-white text-2xl">
-                        <i class="fas fa-award" aria-hidden="true"></i>
+                        <i class="fas fa-award"></i>
                     </div>
                     <h3 class="text-lg font-semibold mb-2 text-amber-800">جودة عالية</h3>
                     <p class="text-sm text-gray-600">قهوة عربية أصيلة من أجود أنواع البن</p>
                 </div>
                 
-                <div class="glass-card p-6 text-center fade-in">
+                <div class="glass-card p-6 text-center">
                     <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-amber-700 to-amber-600 rounded-2xl flex items-center justify-center text-white text-2xl">
-                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <i class="fas fa-users"></i>
                     </div>
                     <h3 class="text-lg font-semibold mb-2 text-amber-800">فريق محترف</h3>
                     <p class="text-sm text-gray-600">مدربون على أعلى معايير الضيافة</p>
                 </div>
                 
-                <div class="glass-card p-6 text-center fade-in">
+                <div class="glass-card p-6 text-center">
                     <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-amber-700 to-amber-600 rounded-2xl flex items-center justify-center text-white text-2xl">
-                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <i class="fas fa-clock"></i>
                     </div>
                     <h3 class="text-lg font-semibold mb-2 text-amber-800">خدمة سريعة</h3>
                     <p class="text-sm text-gray-600">التزام صارم بالمواعيد والجودة</p>
                 </div>
                 
-                <div class="glass-card p-6 text-center fade-in">
+                <div class="glass-card p-6 text-center">
                     <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-amber-700 to-amber-600 rounded-2xl flex items-center justify-center text-white text-2xl">
-                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                     <h3 class="text-lg font-semibold mb-2 text-amber-800">ضيافة أصيلة</h3>
                     <p class="text-sm text-gray-600">نحافظ على التراث العربي الأصيل</p>
@@ -518,13 +428,13 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="section py-16 bg-white loading">
+    <section class="section py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="section-title">ما يقوله عملاؤنا الكرام</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="testimonial-card fade-in">
-                    <div class="text-yellow-300 text-xl mb-4" aria-label="تقييم 5 نجوم">
-                        <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+                <div class="testimonial-card">
+                    <div class="text-yellow-300 text-xl mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="text-lg italic flex-grow">
                         "خدمة راقية جداً وقهوة لذيذة بطعم أصيل. أضافوا لمسة تراثية جميلة لحفل زفاف ابني."
@@ -532,9 +442,9 @@
                     <p class="font-semibold mt-4">محمد العتيبي</p>
                 </div>
                 
-                <div class="testimonial-card fade-in">
-                    <div class="text-yellow-300 text-xl mb-4" aria-label="تقييم 5 نجوم">
-                        <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+                <div class="testimonial-card">
+                    <div class="text-yellow-300 text-xl mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="text-lg italic flex-grow">
                         "شركتنا تتعامل معهم دائماً في المؤتمرات. احترافية عالية والتزام تام بالمواعيد."
@@ -542,9 +452,9 @@
                     <p class="font-semibold mt-4">عبدالله الغامدي</p>
                 </div>
                 
-                <div class="testimonial-card fade-in">
-                    <div class="text-yellow-300 text-xl mb-4" aria-label="تقييم 5 نجوم">
-                        <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+                <div class="testimonial-card">
+                    <div class="text-yellow-300 text-xl mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="text-lg italic flex-grow">
                         "أفضل خدمة قهوة في المنطقة بلا منازع. الطعم أصيل والتقديم راقي جداً."
@@ -555,97 +465,25 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section py-16 loading">
-        <div class="container mx-auto px-4">
-            <h2 class="section-title">تواصل معنا</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass-card p-8 fade-in">
-                    <h3 class="text-2xl font-bold mb-6 text-amber-800 font-serif text-center">معلومات التواصل</h3>
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4 p-4 bg-gradient-to-r from-amber-50 to-amber-100 rounded-2xl">
-                            <div class="w-12 h-12 bg-gradient-to-r from-amber-600 to-amber-700 rounded-full flex items-center justify-center text-white">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-amber-800">هاتف</p>
-                                <p dir="ltr" class="text-lg">+966507712688</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center gap-4 p-4 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl">
-                            <div class="w-12 h-12 bg-gradient-to-r from-green-600 to-green-700 rounded-full flex items-center justify-center text-white">
-                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-green-800">واتساب</p>
-                                <p dir="ltr" class="text-lg">+966507712688</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center gap-4 p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl">
-                            <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white">
-                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-blue-800">المنطقة</p>
-                                <p class="text-lg">الباحة - الطائف - المملكة العربية السعودية</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-4 p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-2xl">
-                            <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-700 rounded-full flex items-center justify-center text-white">
-                                <i class="fas fa-clock" aria-hidden="true"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-purple-800">أوقات العمل</p>
-                                <p class="text-lg">السبت - الخميس: 8:00ص - 10:00م</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-card p-8 fade-in">
-                    <h3 class="text-2xl font-bold mb-6 text-amber-800 font-serif text-center">احجز خدمتك الآن</h3>
-                    <div class="text-center space-y-6">
-                        <div class="coffee-icon mb-6" style="width: 120px; height: 120px; font-size: 3rem;">
-                            <i class="fas fa-coffee" aria-hidden="true"></i>
-                        </div>
-                        <p class="text-lg leading-relaxed mb-6">
-                            نحن في خدمتكم على مدار الساعة لتلبية جميع احتياجاتكم من الضيافة العربية الأصيلة
-                        </p>
-                        <a href="https://wa.me/966507712688" class="whatsapp-btn text-xl px-8 py-4 block w-full text-center" aria-label="احجز خدمتك عبر الواتساب">
-                            <i class="fab fa-whatsapp text-2xl ml-3" aria-hidden="true"></i>
-                            تواصل معنا عبر الواتساب
-                        </a>
-                        <p class="text-sm text-gray-600 mt-4">
-                            متاحون للطوارئ والحجوزات العاجلة 24/7
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Closing Section -->
-    <section class="section py-16 bg-white loading">
+    <section class="section py-16">
         <div class="container mx-auto px-4">
-            <div class="glass-card p-12 text-center fade-in">
+            <div class="glass-card p-12 text-center">
                 <div class="coffee-icon mb-6" style="width: 120px; height: 120px; font-size: 3rem;">
-                    <i class="fas fa-coffee" aria-hidden="true"></i>
+                    <i class="fas fa-coffee"></i>
                 </div>
                 <h2 class="text-4xl font-bold mb-6 text-amber-800 font-serif">
-                    شكراً لاختياركم قهوجي وصبابين الطائف والباحة
+                    شكراً لاختياركم قهوجي وصبابين الطائف و الباحة
                 </h2>
                 <p class="text-xl leading-relaxed mb-8 max-w-4xl mx-auto">
                     نحن فخورون بكوننا شركاءكم في صنع لحظات جميلة من الضيافة العربية الأصيلة. نتطلع إلى خدمتكم بكل تميز وإتقان في جميع مناسباتكم الخاصة والمهمة.
                 </p>
                 <div class="testimonial-card max-w-2xl mx-auto">
-                    <i class="fas fa-quote-right text-4xl mb-4 opacity-30" aria-hidden="true"></i>
+                    <i class="fas fa-quote-right text-4xl mb-4 opacity-30"></i>
                     <p class="text-2xl font-semibold leading-relaxed font-serif">
-                        "في قهوجي وصبابين الطائف والباحة... نصنع من كل رشفة قهوة ذكرى لا تُنسى ولحظة من التراث الأصيل"
+                        "في قهوجي وصبابين الطائف و الباحة... نصنع من كل رشفة قهوة ذكرى لا تُنسى ولحظة من التراث الأصيل"
                     </p>
-                    <i class="fas fa-quote-left text-4xl mt-4 opacity-30" aria-hidden="true"></i>
+                    <i class="fas fa-quote-left text-4xl mt-4 opacity-30"></i>
                 </div>
             </div>
         </div>
@@ -657,8 +495,8 @@
             <div class="grid md:grid-cols-3 gap-8 text-center md:text-right">
                 <div>
                     <div class="mb-6">
-                        <i class="fas fa-coffee text-6xl text-yellow-300 mb-4" aria-hidden="true"></i>
-                        <h3 class="text-2xl font-bold font-serif">قهوجي وصبابين الطائف والباحة</h3>
+                        <i class="fas fa-coffee text-6xl text-yellow-300 mb-4"></i>
+                        <h3 class="text-2xl font-bold font-serif">قهوجي وصبابين الطائف الباحة</h3>
                     </div>
                     <p class="text-lg opacity-90">فن الضيافة العربية الأصيلة منذ القدم</p>
                 </div>
@@ -668,19 +506,19 @@
                     <div class="space-y-4">
                         <div class="bg-white bg-opacity-10 rounded-2xl p-4 flex items-center justify-center md:justify-start gap-3">
                             <div class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                                <i class="fas fa-phone text-green-300" aria-hidden="true"></i>
+                                <i class="fas fa-phone text-green-300"></i>
                             </div>
-                            <span dir="ltr">+966507712688</span>
+                            <span>+966507712688</span>
                         </div>
                         <div class="bg-white bg-opacity-10 rounded-2xl p-4 flex items-center justify-center md:justify-start gap-3">
                             <div class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                                <i class="fab fa-whatsapp text-green-400" aria-hidden="true"></i>
+                                <i class="fab fa-whatsapp text-green-400"></i>
                             </div>
-                            <span>واتساب: <span dir="ltr">+966507712688</span></span>
+                            <span>واتساب: +966507712688</span>
                         </div>
                         <div class="bg-white bg-opacity-10 rounded-2xl p-4 flex items-center justify-center md:justify-start gap-3">
                             <div class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                                <i class="fas fa-map-marker-alt text-red-300" aria-hidden="true"></i>
+                                <i class="fas fa-map-marker-alt text-red-300"></i>
                             </div>
                             <span>الباحة - الطائف - المملكة العربية السعودية</span>
                         </div>
@@ -702,164 +540,61 @@
             </div>
             
             <div class="border-t border-white border-opacity-30 mt-12 pt-8 text-center">
-                <p class="text-lg opacity-80">© 2024 قهوجي وصبابين الطائف والباحة - جميع الحقوق محفوظة</p>
-                <p class="opacity-60 mt-2">تم تطويره بتقنيات حديثة لأفضل تجربة مستخدم</p>
+                <p class="text-lg opacity-80">© 2024 قهوجي وصبابين الطائف و الباحة - جميع الحقوق محفوظة</p>
+                <p class="opacity-60 mt-2">برمجة وتطوير: نسيم محمد +96774786786</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/966507712688" target="_blank" rel="noopener noreferrer" 
-       class="floating-whatsapp" aria-label="تواصل معنا عبر الواتساب">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    <a href="https://wa.me/966507712688" target="_blank" 
+       class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Image Modal -->
-    <div id="imageModal" class="modal">
-        <span class="modal-close" aria-label="إغلاق">&times;</span>
-        <img id="modalImage" src="" alt="">
-    </div>
-
     <script>
-        // Initialize page loading animations
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add loaded class to trigger animations
-            setTimeout(() => {
-                document.querySelectorAll('.loading').forEach(element => {
-                    element.classList.add('loaded');
-                });
-            }, 100);
-
-            // Initialize intersection observer for scroll animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all fade-in elements
-            document.querySelectorAll('.fade-in').forEach(element => {
-                observer.observe(element);
-            });
-
-            // Gallery modal functionality
-            const modal = document.getElementById('imageModal');
-            const modalImage = document.getElementById('modalImage');
-            const closeBtn = document.querySelector('.modal-close');
-
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const imageSrc = this.dataset.image;
-                    const imageAlt = this.querySelector('img').alt;
-                    
-                    modalImage.src = imageSrc;
-                    modalImage.alt = imageAlt;
-                    modal.style.display = 'flex';
-                    document.body.style.overflow = 'hidden';
+        // Gallery modal functionality
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4';
+                modal.style.cursor = 'pointer';
+                
+                const enlargedImg = document.createElement('img');
+                enlargedImg.src = img.src;
+                enlargedImg.alt = img.alt;
+                enlargedImg.className = 'max-w-full max-h-full object-contain rounded-lg';
+                
+                modal.appendChild(enlargedImg);
+                document.body.appendChild(modal);
+                document.body.style.overflow = 'hidden';
+                
+                modal.addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                    document.body.style.overflow = '';
                 });
             });
+        });
 
-            // Close modal functionality
-            function closeModal() {
-                modal.style.display = 'none';
-                document.body.style.overflow = '';
-            }
-
-            closeBtn.addEventListener('click', closeModal);
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    closeModal();
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
-
-            // Close modal with Escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && modal.style.display === 'flex') {
-                    closeModal();
-                }
-            });
-
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            // Preload images
-            const imageUrls = [
-                'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4uSLixYxuuKZ0BMnJF8M1dEfDl-5aSM1BQmBFNKqw1QTOBXXVwq3HrymeQ5n6SLTy6SpRrxyQPkYD-EH7LBM4lS94zCY4NMN4tINxCh2fAG-ELPUyUxobUMAm1brqa0NjY_z2_hHpzYOSzE4nKEkIagr6jvqvqwQEmZ7WUBogHUfFUy6sHejwUlnvn_d6/s800/IMG-20250619-WA0033.jpg',
-                'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTqIN86Q5Qf7HL8MKU5AhSIADfERrzu2-pEIVeAI0Rf9sywXFL39dhWrvppcfZX6GkfrmYOt45munbWyD1zDzOkZnyp1_4yFY4cHMcadky6Xvt1IpuAN02Y5bjPIUH_kV4MFzC7L6ObNho8xViVyRv2bnvNNXl3SUBCCIQ506cSsmA6KysheJDIX-w9Sx4/s800/IMG-20250619-WA0029.jpg',
-                'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjig4Citk_WSoxmsw-3O5V4xLk0hpJdZGOS5vgJaVs4vYMMQgTvU89JmuDxnIVKyRlcw35S8LD3blPPWmYQoaY9SqrEmWnojpfwPQTe1yRJXDV_2zDPKdAdTZxY6zt85rZxQ_ZaCQu46Jx3Jabr63VSOAYSXsHGz7D12phnhxzMvpChZS_SSZq0-wqggwSk/s800/IMG-20250619-WA0032.jpg',
-                'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhi98Y5ZVoPMXdwMpaXgvbHEqrKmcEzq_6KS8opi6-oc6uqlyOuMhPX2-Lc24z1m1LH2SQKy0nKNsUJ-pjVQ2JJQ3Xhr3xJyXXBWt8LQ756dUV7PzZo02m_-Jgb0fu4YgrZtInp-C4ee1s3F359DN99ByJQe_YtpOiHfpyStS66_F4rXBXW2pSnoOrMVCHM/s800/IMG-20250619-WA0030.jpg'
-            ];
-
-            imageUrls.forEach(url => {
-                const img = new Image();
-                img.src = url;
-            });
         });
 
-        // Performance optimization - lazy loading fallback
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src || img.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-
-            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-
-        // Error handling for images
-        document.querySelectorAll('img').forEach(img => {
-            img.addEventListener('error', function() {
-                this.style.display = 'none';
-                console.warn('Failed to load image:', this.src);
-            });
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
         });
-
-        // Add click tracking for analytics (optional)
-        document.querySelectorAll('.whatsapp-btn, .floating-whatsapp').forEach(btn => {
-            btn.addEventListener('click', function() {
-                // Analytics tracking can be added here
-                console.log('WhatsApp contact button clicked');
-            });
-        });
-    </script>
-
-    <!-- Service Worker Registration (optional for PWA) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js').then(function(registration) {
-                    console.log('ServiceWorker registration successful');
-                }, function(err) {
-                    console.log('ServiceWorker registration failed');
-                });
-            });
-        }
     </script>
 </body>
 </html>
