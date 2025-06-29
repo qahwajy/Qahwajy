@@ -492,6 +492,20 @@
             </div>
         </div>
     </section>
+<form name="contact" method="POST" data-netlify="true">
+  <!-- هذا الحقل ضروري ليتعرف Netlify على اسم النموذج -->
+  <input type="hidden" name="form-name" value="contact">
+
+  <p>
+    <label>الاسم <input type="text" name="name" required></label>
+  </p>
+  <p>
+    <label>البريد الإلكتروني <input type="email" name="email" required></label>
+  </p>
+  <p>
+    <button type="submit">إرسال</button>
+  </p>
+</form>
 
     <!-- Footer -->
     <footer class="coffee-gradient text-white py-16">
