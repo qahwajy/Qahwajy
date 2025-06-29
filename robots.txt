@@ -1,3 +1,5 @@
 User-agent: *
-Allow: /
-Sitemap: https://qahwajialpaha.com//sitemap.xml
+Disallow:
+
+Sitemap: https://qahwajialpaha.com/sitemap.xml
+Host: qahwajialpaha.com
