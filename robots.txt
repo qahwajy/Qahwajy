@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://http://qahwajialpaha.com//sitemap.xml
+Sitemap: https://qahwajialpaha.com//sitemap.xml
